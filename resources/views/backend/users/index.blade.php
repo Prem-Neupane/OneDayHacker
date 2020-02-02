@@ -69,7 +69,12 @@
                                 <td>
                                     <a href="{{route('users.edit',$user->id)}}"><button type="button" class="btn-primary">Edit</button></a>
                                     <br/>
-                                    <button class="btn btn-danger btn-xs" data-value="{{ $user->id }}" id="delete_detail" data-toggle="modal" data-target="#delete_modal" title="Remove from this place Details" style="background:darkred;color:white;margin-top:0px;">
+                                     {{-- <form action="{{route('users.destroy',$user->id)}}" method="POST">
+                                            @csrf
+                                            {{method_field('DELETE')}}
+                                            <button type="submit" class="btn-danger">delete</button>
+                                    </form> --}}
+                                     <button class="btn btn-danger btn-xs" data-value="{{ $user->id }}" id="delete_detail" data-toggle="modal" data-target="#delete_modal" title="Remove from this place Details" style="background:darkred;color:white;margin-top:0px;">
                                         Delete
                                     </button>
                                 </td>
@@ -110,17 +115,20 @@
   <!-- Datatables -->
     {{-- <script src="{{URL::asset('backend/vendors/datatables.net/js/jquery.dataTables.min.js')}}"></script> --}}
     <script src="{{URL::asset('backend/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
-<script>
+
+
+    <script>
       $(document).ready(function (e) {
             $(document).on('click', '#delete_detail', function (e) {
                 var user_id = $(this).attr('data-value');
                 $("#delete_confirm").click(function () {
+
                     $.ajaxSetup({
                         headers: {'X-CSRF-TOKEN': '{{ Session::token() }}'}
                     });
 
                     $.ajax({
-                        url: '{{ url('dashboard/users') }}' + '/' + user_id,
+                        url: '{{ url('/dashboard/users') }}' + '/' + user_id,
                         type: 'DELETE',  //
                         data: {
                             "id": user_id,
@@ -128,11 +136,9 @@
                         },
 
                         success: function (result) {
-                            // console.log(result)
-                            window.location = '{{route('users.index')}}'';
+                            window.location = '{{route('users.index')}}';
                         },
                         error: function (result) {
-                            // console.log(result)
                             window.location = '{{route('users.index')}}';
                         }
                     });
@@ -140,5 +146,4 @@
             });
         });
     </script>
-
 @endsection

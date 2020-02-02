@@ -26,7 +26,6 @@ html, body{
 }
 
 .navbar {
-	padding: .8rem;
 	opacity: 0.85;
 }
 
@@ -100,10 +99,6 @@ html, body{
 }
 .search-content .search-form .form-inline input[type=submit]:hover {
     background-color: #f21b22; 
-}
-
-.form-group#searchb{
-	width:60%;
 }
 
 .form-inline {

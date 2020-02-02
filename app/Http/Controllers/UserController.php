@@ -105,9 +105,7 @@ class UserController extends Controller
     {
         if ($request->ajax()) {
 
-            // return response()->json(['status' => $id]);
             $user = User::where('id',$id);
-
             try {
                 if ($user) { }
                 if ($user->delete()) {
@@ -117,6 +115,7 @@ class UserController extends Controller
             } catch (Exception $ex) {
                 $request->session()->flash('failure', 'User Details Could Not Be Deleted.');
                 $request->session()->flash('failure', $ex->getMessage());
+                return response()->json(['status' => false]);
             }
         }
     }
