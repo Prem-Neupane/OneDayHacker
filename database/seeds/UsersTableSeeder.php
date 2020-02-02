@@ -15,6 +15,11 @@ class UsersTableSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@admin.com',
             'password' => bcrypt('12345678'),
+
+            'role' => 'guide',
+            'language' =>'nepali,english ',
+            'location' => 'butwal',
+            'dob' => '1996-05-12',
         ]);
     }
 }
