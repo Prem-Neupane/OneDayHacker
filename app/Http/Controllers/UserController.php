@@ -15,7 +15,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-      return view('view.user.index')->with('users',$users);
+      return view('backend.users.index')->with('users',$users);
     }
 
     /**
@@ -37,7 +37,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //to create new users
+
         $this->validate($request,[
             'password'=>'string|required',
             'confirm_password'=>'same:password|string|required'
@@ -51,7 +51,11 @@ class UserController extends Controller
         $user->dob = $request->dob;
         $user->image = $request->image;
         $user->location = $request->location;
-        $user->language = $request->language;
+        //array to string imploding
+        $lang = (array) $request->languages;
+        $lang = implode(", ", $lang);
+        $user->language = $lang;
+
         $user->bio = $request->bio;
         $user->save();
         return redirect()->route('users.index')->with('success','user created successfully !!!!');
@@ -101,7 +105,9 @@ class UserController extends Controller
     {
         if ($request->ajax()) {
 
-            $user = User::find($id);
+            // return response()->json(['status' => $id]);
+            $user = User::where('id',$id);
+
             try {
                 if ($user) { }
                 if ($user->delete()) {
@@ -111,7 +117,6 @@ class UserController extends Controller
             } catch (Exception $ex) {
                 $request->session()->flash('failure', 'User Details Could Not Be Deleted.');
                 $request->session()->flash('failure', $ex->getMessage());
-                return response()->json(['status' => $ex->getMessage()]);
             }
         }
     }

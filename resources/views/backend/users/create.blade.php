@@ -82,7 +82,7 @@
                                 <div class="col-md-12 col-sm-10 col-xs-12">
                                     <label class="control-label col-md-0 col-sm-0 col-xs-0 @error('confirm_password') is-invalid @enderror" for="confirm_passworrd">Confirm Password <span class="required">*</span>
                                     </label>
-                                    <input type="password" id="confirm_password" required="required"  name="confirm_password" class="form-control col-md-7 col-xs-12" placeholder="place_name">
+                                    <input type="password" id="confirm_password" required="required"  name="confirm_password" class="form-control col-md-7 col-xs-12" placeholder="Confirm Your Password">
                                 </div>
                                     @error('confirm_password')
                                         <span class="invalid-feedback" role="alert">
@@ -148,7 +148,7 @@
                                 <div class="col-md-12 col-sm-10 col-xs-12">
                                     <label class="control-label col-md-0 col-sm-0 col-xs-0 @error('location') is-invalid @enderror" for="full-name">Location <span class="required">*</span>
                                     </label>
-                                    <input type="text" id="location" required="required"  name="location" class="form-control col-md-7 col-xs-12" placeholder="Date of Birth">
+                                    <input type="text" id="location" required="required"  name="location" class="form-control col-md-7 col-xs-12" placeholder="Your Location">
                                 </div>
                                     @error('location')
                                         <span class="invalid-feedback" role="alert">
@@ -156,19 +156,28 @@
                                         </span>
                                     @enderror
                             </div>
-                             <div class="form-group row">
+                            <div class="form-group">
                                 <div class="col-md-12 col-sm-10 col-xs-12">
-                                    <label class="control-label col-md-0 col-sm-0 col-xs-0 @error('language') is-invalid @enderror" for="full-name">Language<span class="required">*</span>
-                                    </label>
-                                    <input type="text" id="language" required="required"  name="language" class="form-control col-md-7 col-xs-12" placeholder="Date of Birth">
+                                    <label class="control-label col-md-0 col-sm-0 col-xs-0" for="description">Languages<span class="required">*</span></label>
                                 </div>
-                                    @error('language')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                            </div>
+                                <div class="col-md-12 col-sm-10 col-xs-12">
+                                    <select class="form-control col-md-7 js-example-basic-multiple" name="languages[]" multiple>
+                                        <option value="nepali">Nepali</option>
+                                        <option value="english">English</option>
+                                        <option value="japanese">Japanese</option>
+                                        <option value="korean">Korean</option>
+                                        <option value="spanish">Spanish</option>
+                                        <option value="portuglist">Portuglist</option>
+                                    </select>
+                                </div>
 
+
+                                @error('rel_events')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
                          <div class="form-group">
                                 <div class="col-md-12 col-sm-10 col-xs-12">
@@ -316,5 +325,5 @@
 
         });
     </script>
-
+@include('backend.layouts.select2')
 @endsection

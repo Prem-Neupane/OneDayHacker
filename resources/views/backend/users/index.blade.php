@@ -58,16 +58,17 @@
                                 </td>
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->email}}</td>
-                                <img src="{{$place->image}}" alt="{{$place->name}}" style="width:100px;height:100px; !important">
+                                <td>
+                                    <img src="{{$user->image}}" alt="{{$user->name}}" style="width:100px;height:100px; !important">
+                                </td>
                                 <td>{{$user->language }}</td>
                                 <td>{{$user->location }}</td>
                                 <td>{{$user->role}}</td>
+
                                 <td>
-                                </td>
-                                <td>
-                                    <a href="{{route('place.edit',$place->id)}}"><button type="button" class="btn-primary">Edit</button></a>
+                                    <a href="{{route('users.edit',$user->id)}}"><button type="button" class="btn-primary">Edit</button></a>
                                     <br/>
-                                    <button class="btn btn-danger btn-xs" data-value="{{ $place->id }}" id="delete_detail" data-toggle="modal" data-target="#delete_modal" title="Remove from this place Details" style="background:darkred;color:white;margin-top:0px;">
+                                    <button class="btn btn-danger btn-xs" data-value="{{ $user->id }}" id="delete_detail" data-toggle="modal" data-target="#delete_modal" title="Remove from this place Details" style="background:darkred;color:white;margin-top:0px;">
                                         Delete
                                     </button>
                                 </td>
@@ -108,31 +109,31 @@
   <!-- Datatables -->
     {{-- <script src="{{URL::asset('backend/vendors/datatables.net/js/jquery.dataTables.min.js')}}"></script> --}}
     <script src="{{URL::asset('backend/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
-
-
-    <script>
+<script>
       $(document).ready(function (e) {
             $(document).on('click', '#delete_detail', function (e) {
-                var place_id = $(this).attr('data-value');
+                var user_id = $(this).attr('data-value');
                 $("#delete_confirm").click(function () {
-
+                    alert(user_id)
                     $.ajaxSetup({
                         headers: {'X-CSRF-TOKEN': '{{ Session::token() }}'}
                     });
 
                     $.ajax({
-                        url: '{{ url('/dashboard/place') }}' + '/' + place_id,
-                        type: 'DELETE',  //
+                        url: '{{ url('dashboard/users') }}' + '/' + user_id,
+                        type: 'POST',  //
                         data: {
-                            "id": place_id,
+                            "id": user_id,
                             "_method": 'DELETE',
                         },
 
                         success: function (result) {
-                            window.location = '{{route('place.index')}}';
+                            // console.log(result)
+                            window.location = '{{route('users.index')}}'';
                         },
                         error: function (result) {
-                            window.location = '{{route('place.index')}}';
+                            // console.log(result)
+                            window.location = '{{route('users.index')}}';
                         }
                     });
                 });

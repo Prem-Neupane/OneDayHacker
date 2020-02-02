@@ -20,6 +20,7 @@ class UsersTableSeeder extends Seeder
             'language' =>'nepali,english ',
             'location' => 'butwal',
             'dob' => '1996-05-12',
+            'image'=> 'https://i.ytimg.com/vi/7Xu_s1YJhyg/maxresdefault.jpg'
 
         ]);
     }
