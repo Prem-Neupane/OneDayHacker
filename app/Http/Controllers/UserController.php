@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -24,7 +25,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        //to rendering Create form
+        return view('backend.users.create');
     }
 
     /**
@@ -35,7 +37,24 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //to create new users
+        $this->validate($request,[
+            'password'=>'string|required',
+            'confirm_password'=>'same:password|string|required'
+        ]);
+        $user = new User;
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = $request->password;
+
+        $user->role = $request->role;
+        $user->dob = $request->dob;
+        $user->image = $request->image;
+        $user->location = $request->location;
+        $user->language = $request->language;
+        $user->bio = $request->bio;
+        $user->save();
+        return redirect()->route('users.index')->with('success','user created successfully !!!!');
     }
 
     /**
@@ -78,9 +97,23 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request,$id)
     {
-        //
+        if ($request->ajax()) {
+
+            $user = User::find($id);
+            try {
+                if ($user) { }
+                if ($user->delete()) {
+                    $request->session()->flash('success', 'User Details Successfully Deleted.');
+                    return response()->json(['status' => true]);
+                }
+            } catch (Exception $ex) {
+                $request->session()->flash('failure', 'User Details Could Not Be Deleted.');
+                $request->session()->flash('failure', $ex->getMessage());
+                return response()->json(['status' => $ex->getMessage()]);
+            }
+        }
     }
 
     public function log_out(){

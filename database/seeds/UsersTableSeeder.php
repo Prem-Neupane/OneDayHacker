@@ -20,6 +20,7 @@ class UsersTableSeeder extends Seeder
             'language' =>'nepali,english ',
             'location' => 'butwal',
             'dob' => '1996-05-12',
+
         ]);
     }
 }

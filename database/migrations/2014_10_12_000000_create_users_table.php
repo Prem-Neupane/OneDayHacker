@@ -25,7 +25,9 @@ class CreateUsersTable extends Migration
             $table->enum('role',['guide','tourist']);
             $table->string('language')->default('nepali');
             $table->string('dob');
+            $table->string('image')->nullable();
             $table->string('location');
+            $table->text('bio')->nullable() ;
             $table->timestamps();
         });
     }

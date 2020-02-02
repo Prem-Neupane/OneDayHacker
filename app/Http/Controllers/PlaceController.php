@@ -101,7 +101,7 @@ class PlaceController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Request $request,$id)
-    { {
+    {
             if ($request->ajax()) {
 
                 $place = Place::find($id);
@@ -118,6 +118,6 @@ class PlaceController extends Controller
                     return response()->json(['status' => $ex->getMessage()]);
                 }
             }
-        }
     }
+
 }

@@ -40,8 +40,8 @@
                     </li> --}}
                     <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="{{route('user.create')}}">Add Users</a></li>
-                            <li><a href="{{route('user.index')}}">All Users</a></li>
+                            <li><a href="{{route('users.create')}}">Add Users</a></li>
+                            <li><a href="{{route('users.index')}}">All Users</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-globe"></i> Places <span class="fa fa-chevron-down"></span></a>
@@ -149,7 +149,7 @@
             <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
             </a>
-            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+            <a data-toggle="tooltip" data-placement="top" title="Logout" href="{{route('logout')}}">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
             </a>
         </div>

@@ -22,6 +22,22 @@
                 </div>
                 <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="tile-stats">
+                        <div class="icon"><i class="fa fa-user"></i></div>
+                        <div class="count">{{$users->where('role','guide')->count()}}</div>
+                        <h3>Guides</h3>
+                        <p>Total Users</p>
+                    </div>
+                </div>
+                <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="tile-stats">
+                        <div class="icon"><i class="fa fa-user"></i></div>
+                        <div class="count">{{$users->where('role','tourist')->count()}}</div>
+                        <h3>Tourists</h3>
+                        <p>Total Users</p>
+                    </div>
+                </div>
+                <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="tile-stats">
                         <div class="icon"><i class="fa fa-globe"></i></div>
                         <div class="count">{{$places->count()}}</div>
                         <h3>Places</h3>
