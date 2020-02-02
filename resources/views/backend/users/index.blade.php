@@ -115,14 +115,13 @@
             $(document).on('click', '#delete_detail', function (e) {
                 var user_id = $(this).attr('data-value');
                 $("#delete_confirm").click(function () {
-                    alert(user_id)
                     $.ajaxSetup({
                         headers: {'X-CSRF-TOKEN': '{{ Session::token() }}'}
                     });
 
                     $.ajax({
                         url: '{{ url('dashboard/users') }}' + '/' + user_id,
-                        type: 'POST',  //
+                        type: 'DELETE',  //
                         data: {
                             "id": user_id,
                             "_method": 'DELETE',

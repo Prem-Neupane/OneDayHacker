@@ -59,7 +59,7 @@
                                 <div class="col-md-12 col-sm-10 col-xs-12">
                                     <label class="control-label col-md-0 col-sm-0 col-xs-0 @error('email') is-invalid @enderror" for="full-name">Email <span class="required">*</span>
                                     </label>
-                                    <input type="email" id="email" required="required"  name="email" class="form-control col-md-7 col-xs-12" placeholder="district">
+                                    <input type="email" id="email" required="required"  name="email" class="form-control col-md-7 col-xs-12" placeholder="email address">
                                 </div>
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -69,9 +69,9 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12 col-sm-10 col-xs-12">
-                                    <label class="control-label col-md-0 col-sm-0 col-xs-0 @error('password') is-invalid @enderror" for="full-name">City <span class="required">*</span>
+                                    <label class="control-label col-md-0 col-sm-0 col-xs-0 @error('password') is-invalid @enderror" for="full-name">Password <span class="required">*</span>
                                     </label>
-                                    <input type="password" id="password" required="required"  name="password" class="form-control col-md-7 col-xs-12" placeholder="city">
+                                    <input type="password" id="password" required="required"  name="password" class="form-control col-md-7 col-xs-12" placeholder="Password">
                                 </div>
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -79,6 +79,7 @@
                                         </span>
                                     @enderror
                             </div>
+
                             <div class="form-group row">
                                 <div class="col-md-12 col-sm-10 col-xs-12">
                                     <label class="control-label col-md-0 col-sm-0 col-xs-0 @error('confirm_password') is-invalid @enderror" for="confirm_passworrd">Confirm Password <span class="required">*</span>
