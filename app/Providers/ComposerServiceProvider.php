@@ -24,7 +24,6 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //for home page
-        View::composer('backend.index', 'App\Http\ViewComposer\HomeComposer@dashboard_data');
+        View::composer('backend.*', 'App\Http\ViewComposer\HomeComposer@dashboard_data');
     }
 }

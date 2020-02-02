@@ -18,6 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::group(['middleware' => ['auth'] ], function () {
     Route::get('/home', 'HomeController@index')->name('home');
-
+    route::resource('dashbaord/user','UserController')->name('user');
     Route::resource('dashboard/place','PlaceController');
+    Route::get('logout', 'UserController@logout')->logout();
 });

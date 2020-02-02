@@ -32,10 +32,16 @@
                             <li><a href="index3.html">Dashboard3</a></li>
                         </ul> --}}
                     </li>
-                    <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
+                    {{-- <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="">Create Users</a></li>
                             <li><a href="form_advanced.html">All Users</a></li>
+                        </ul>
+                    </li> --}}
+                    <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="{{route('user.create')}}">Add Users</a></li>
+                            <li><a href="{{route('user.index')}}">All Users</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-globe"></i> Places <span class="fa fa-chevron-down"></span></a>
