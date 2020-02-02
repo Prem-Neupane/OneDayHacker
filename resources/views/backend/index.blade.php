@@ -30,7 +30,7 @@
                 </div>
                 <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="tile-stats">
-                        <div class="icon"><i class="fa fa-user"></i></div>
+                        <div class="icon"><i class="fa fa-plane"></i></div>
                         <div class="count">{{$users->where('role','tourist')->count()}}</div>
                         <h3>Tourists</h3>
                         <p>Total Users</p>
@@ -46,7 +46,7 @@
                 </div>
             </div>
 
-            {{-- <div class="row">
+            <div class="row">
                 <div class="col-md-12">
                     <div class="x_panel">
                         <div class="x_title">
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
 
 
 
@@ -106,7 +106,7 @@
                 <div class="col-md-4">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Top Profiles <small>Sessions</small></h2>
+                            <h2>Top Places <small>to visist</small></h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                 </li>
@@ -125,56 +125,19 @@
                             <div class="clearfix"></div>
                         </div>
                         <div class="x_content">
-                            <article class="media event">
-                                <a class="pull-left date">
-                                    <p class="month">April</p>
-                                    <p class="day">23</p>
-                                </a>
-                                <div class="media-body">
-                                    <a class="title" href="#">Item One Title</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </article>
-                            <article class="media event">
-                                <a class="pull-left date">
-                                    <p class="month">April</p>
-                                    <p class="day">23</p>
-                                </a>
-                                <div class="media-body">
-                                    <a class="title" href="#">Item Two Title</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </article>
-                            <article class="media event">
-                                <a class="pull-left date">
-                                    <p class="month">April</p>
-                                    <p class="day">23</p>
-                                </a>
-                                <div class="media-body">
-                                    <a class="title" href="#">Item Two Title</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </article>
-                            <article class="media event">
-                                <a class="pull-left date">
-                                    <p class="month">April</p>
-                                    <p class="day">23</p>
-                                </a>
-                                <div class="media-body">
-                                    <a class="title" href="#">Item Two Title</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </article>
-                            <article class="media event">
-                                <a class="pull-left date">
-                                    <p class="month">April</p>
-                                    <p class="day">23</p>
-                                </a>
-                                <div class="media-body">
-                                    <a class="title" href="#">Item Three Title</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </article>
+                            @isset($places)
+                                @foreach ($places as $place)
+                                <article class="media event">
+                                    <a  class="pull-left">
+                                    <img src="{{$place->feature_image}}" height="50px;" width="50px;" style="border-radius:5px;">
+                                    </a>
+                                    <div class="media-body">
+                                        <a class="title" href="#">{{$place->title}}</a>
+                                        <p>{!! substr($place->description,0,60) !!}</p>
+                                    </div>
+                                </article>
+                                @endforeach
+                            @endisset
                         </div>
                     </div>
                 </div>

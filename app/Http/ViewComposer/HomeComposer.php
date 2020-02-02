@@ -14,8 +14,11 @@ class HomeComposer
     {
        $users = User::all();
        $places = Place::all();
-    //    dd($places);
        $view->with('users',$users)->with('places',$places);
+    }
+    public function user_data(View $view)
+    {
+
     }
 }
 //
