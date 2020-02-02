@@ -100,8 +100,24 @@ class PlaceController extends Controller
      * @param  \App\Place  $place
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Place $place)
-    {
-        //
+    public function destroy(Request $request,$id)
+    { {
+            if ($request->ajax()) {
+
+                $place = Place::find($id);
+                try {
+                    if ($place) {
+                    }
+                    if ($place->delete()) {
+                        $request->session()->flash('success', 'Place Details Successfully Deleted.');
+                        return response()->json(['status' => true]);
+                    }
+                } catch (Exception $ex) {
+                    $request->session()->flash('failure', 'Place Details Could Not Be Deleted.');
+                    $request->session()->flash('failure', $ex->getMessage());
+                    return response()->json(['status' => $ex->getMessage()]);
+                }
+            }
+        }
     }
 }
