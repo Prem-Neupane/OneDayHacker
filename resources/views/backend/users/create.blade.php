@@ -9,6 +9,7 @@
 @section('content')
         <!-- page content -->
         <div class="right_col" role="main">
+             @include('backend.layouts.alerts')
             <div class="page-title">
               <div class="title_left">
                 <h3>New User Details </h3>

@@ -145,7 +145,7 @@
                 <div class="col-md-4">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Top Profiles <small>Sessions</small></h2>
+                            <h2>Top Guides <small>to hier</small></h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                 </li>
@@ -164,56 +164,19 @@
                             <div class="clearfix"></div>
                         </div>
                         <div class="x_content">
+                            @isset($guides)
+                            @foreach ($guides as $guide)
                             <article class="media event">
-                                <a class="pull-left date">
-                                    <p class="month">April</p>
-                                    <p class="day">23</p>
+                                <a class="pull-left ">
+                                    <img src="{{$guide->image}}" height="50px;" width="50px;" style="border-radius:5px;">
                                 </a>
                                 <div class="media-body">
-                                    <a class="title" href="#">Item One Title</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <a class="title" href="#">{{$guide->name}}</a>
+                                    <p>{!! substr($guide->bio,0,60) !!}</p>
                                 </div>
                             </article>
-                            <article class="media event">
-                                <a class="pull-left date">
-                                    <p class="month">April</p>
-                                    <p class="day">23</p>
-                                </a>
-                                <div class="media-body">
-                                    <a class="title" href="#">Item Two Title</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </article>
-                            <article class="media event">
-                                <a class="pull-left date">
-                                    <p class="month">April</p>
-                                    <p class="day">23</p>
-                                </a>
-                                <div class="media-body">
-                                    <a class="title" href="#">Item Two Title</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </article>
-                            <article class="media event">
-                                <a class="pull-left date">
-                                    <p class="month">April</p>
-                                    <p class="day">23</p>
-                                </a>
-                                <div class="media-body">
-                                    <a class="title" href="#">Item Two Title</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </article>
-                            <article class="media event">
-                                <a class="pull-left date">
-                                    <p class="month">April</p>
-                                    <p class="day">23</p>
-                                </a>
-                                <div class="media-body">
-                                    <a class="title" href="#">Item Three Title</a>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                            </article>
+                            @endforeach
+                            @endisset
                         </div>
                     </div>
                 </div>
