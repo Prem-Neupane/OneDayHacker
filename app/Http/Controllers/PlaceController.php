@@ -36,15 +36,16 @@ class PlaceController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
         $place = new Place();
         $place->title = $request->title;
         $place->place_name = $request->place_name;
         $place->district = $request->district;
         $place->city = $request->city;
+        $place->feature_image = $request->feature_image;
         $place->description = $request->description;
-        // $place->avg_rating =
-        // $place->rating_count =
+        $place->avg_rating = "4.5";
+        $place->rating_count ="10";
         $place->save();
         return redirect()->route('place.index')->with('suceess','place create successfully');
     }

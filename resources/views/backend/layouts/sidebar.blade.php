@@ -34,14 +34,14 @@
                     </li>
                     <li><a><i class="fa fa-users"></i> Users <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="form.html">Create Users</a></li>
+                            <li><a href="">Create Users</a></li>
                             <li><a href="form_advanced.html">All Users</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-globe"></i> Places <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                            <li><a href="form.html">Add Place</a></li>
-                            <li><a href="form_advanced.html">All Places</a></li>
+                            <li><a href="{{route('place.create')}}">Add Place</a></li>
+                            <li><a href="{{route('place.index')}}">All Places</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-edit"></i> Reviews <span class="fa fa-chevron-down"></span></a>

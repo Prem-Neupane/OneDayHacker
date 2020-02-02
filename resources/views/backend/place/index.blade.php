@@ -11,7 +11,6 @@
         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
-                 @include('backend.layouts.alerts')
               <div class="title_left">
                 <h3>All Place Details <small>All Places' Details</small></h3>
               </div>

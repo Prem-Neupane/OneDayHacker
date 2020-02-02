@@ -56,11 +56,11 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12 col-sm-10 col-xs-12">
-                                    <label class="control-label col-md-0 col-sm-0 col-xs-0 @error('destrict') is-invalid @enderror" for="full-name">Destrict <span class="required">*</span>
+                                    <label class="control-label col-md-0 col-sm-0 col-xs-0 @error('district') is-invalid @enderror" for="full-name">District <span class="required">*</span>
                                     </label>
-                                    <input type="text" id="destrict" required="required"  name="destrict" class="form-control col-md-7 col-xs-12" placeholder="Destrict">
+                                    <input type="text" id="district" required="required"  name="district" class="form-control col-md-7 col-xs-12" placeholder="district">
                                 </div>
-                                    @error('destrict')
+                                    @error('district')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
