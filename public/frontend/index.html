@@ -4,19 +4,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Visit Nepal 2020</title>
+	<link rel="icon" href="img/logo.png">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/js/all.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css/style.css">
 <body>
 	
 	<!-- Navigation bar -->
 	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
 		<div class="container-fluid">
-			<div class="row"><a class="navbar-brand" href="#"><img src="img/logo.png"></a> 
+			<div class="row"><a class="navbar-brand" href="index.html"><img src="img/logo.png"></a> 
 				<div class="brand-title">
 					<span class="ftitle">Guides</span><span class="ltitle">Nepal</span>
 					<p class="brand-tagline">&ldquo; Promoting tourism in Nepal &rdquo;</p>
@@ -27,6 +28,12 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="#topP">Top Places</a></li>
+					<li class="nav-item"><a class="nav-link" href="#topG">Top Guides</a></li>
+					<form class="form-inline my-2 my-lg-0">
+				      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				      <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+				    </form>
 					<li class="nav-item log"><a class="nav-link" href="#">Login</a></li>
 					<li class="nav-item"><a class="nav-link" href="#">Sign Up</a></li>
 				</ul>
@@ -94,7 +101,7 @@
 	<!-- /Searchbar -->
 
 	<!-- Top places -->
-	<div class="container-fluid padding">
+	<div id="topP" class="container-fluid padding">
 		<div class="row welcome text-center">
 			<div class="col-12">
 				<h1 class="display-4">Top Places</h1>
@@ -165,10 +172,8 @@
 	<!-- /Top places -->
 	
 	<!-- Top guides -->
-
-	<!-- Top places -->
 	<hr class="light">
-	<div class="container-fluid padding">
+	<div id="topG" class="container-fluid padding">
 		<div class="row welcome text-center">
 			<div class="col-12">
 				<h1 class="display-4">Top Guides</h1>
@@ -191,7 +196,7 @@
 							<img src="img/full.png">
 							<img src="img/full.png">
 						</div>
-						<a href="#" class="btn btn-outline-secondary">View Profile</a>
+						<a href="singleguide.html" class="btn btn-outline-secondary">View Profile</a>
 					</div>
 				</div>
 			</div>
@@ -248,6 +253,18 @@
 
 
 	<!-- /Top guides -->
+
+	<!-- helpline -->
+	<div class="jumbotron">
+		<h1 class="display-4 text-center">Top Guides</h1>
+		<hr class="horizon">
+		<div class="row text-center">
+			<div class="col-md-4"> Helpline Number : 123-456-789</div>
+			<div class="col-md-4"> Transportation Helpline : 123-456-789</div>
+			<div class="col-md-4"> Embassy Number : 123-456-789</div>
+		</div>
+
+	</div>
 	
 	<!-- Footer -->
 

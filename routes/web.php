@@ -13,7 +13,14 @@
 
 Route::get('/', function () {
     return view('frontend.index');
-});
+})->name('home');
+route::get('/signin', function () {
+    return view('frontend.signin');
+})->name('signin');
+route::get('/signup', function () {
+    return view('frontend.signup');
+})->name('signup');
+
 
 Auth::routes();
 Route::group(['middleware' => ['auth'] ], function () {

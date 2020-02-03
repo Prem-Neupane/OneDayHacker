@@ -1,0 +1,13 @@
+body {
+    background-image: url(../img/cristian-grecu-6yBAQeeNROU-unsplash.jpg);
+}
+.head-center {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0px;
+}
+
+.guider-border-box {
+    border : 1px solid black;
+}

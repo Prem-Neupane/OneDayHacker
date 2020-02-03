@@ -156,6 +156,37 @@ footer{
 	opacity: 0.95;
 }
 
+.guide-details{
+	border: 1px solid rgba(0,0,0,.125);
+	padding: 1rem;
+}
+
+.guide-card{
+	margin-top: 6rem;
+}
+
+/*extra*/
+.ptitle{
+	padding: 1rem;
+}
+
+.guide{
+	margin: 1.5rem;
+}
+
+.placereviews{
+	width: 100%;
+	height: 100px;
+}
+
+.hire{
+	padding-top: 2rem;
+}
+
+.btn-hire{
+	margin-left: 0.5rem;
+}
+
 /*---Media Queries --*/
 @media (max-width: 992px) {
 

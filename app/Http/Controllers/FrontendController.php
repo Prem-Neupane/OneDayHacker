@@ -16,8 +16,7 @@ class FrontendController extends Controller
    }
    public function get_guide($id){
         $user = User::find($id);
-        dd($user);
-    return view('backend.index')->with('user', $user);
+    return view('frontend.guide-profile')->with('user', $user);
    }
    public function get_places($id){
         $place = Place::find($id);
