@@ -11,16 +11,20 @@ class FrontendController extends Controller
    public function dashboard_data(){
         $users = User::all();
         $places = Place::all();
-        dd($users);
     return view('backend.index')->with('users', $users)->with('places', $places);
    }
    public function get_guide($id){
         $user = User::find($id);
     return view('frontend.guide-profile')->with('user', $user);
    }
-   public function get_places($id){
+   public function get_place($id){
+        $guides = User::where('role', 'guide')->take(4)->get();
+
         $place = Place::find($id);
-        dd($place);
-    return view('backend.index')->with('place', $place);
+    return view('frontend.single-place')->with('place', $place)->with('topGuides', $guides);
+   }
+   public function get_hire_page($id){
+       $user = User::where('id',$id)->first();
+    return view('frontend.hire')->with('guie', $user);
    }
 }

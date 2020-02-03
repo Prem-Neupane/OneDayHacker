@@ -16,7 +16,7 @@
 					<img class="rounded-circle card-img-top" src="{{$user->image}}">
 				</div>
 				<div class="hire text-center">
-					<button class="btn btn-outline-primary btn-lg"> Hire Guide </button>
+					<button class="btn btn-outline-primary btn-lg"><a href="{{route('hire',$user->id)}}"> Hire Guide </a></button>
 				</div>
 			</div>
 			<div class="guide-details col-md-9 col-sm-8">

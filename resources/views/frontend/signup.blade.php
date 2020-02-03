@@ -1,15 +1,18 @@
 @extends('frontend.layouts.layout')
+@section('styles')
+<link rel="stylesheet" type="text/css" href="{{URL::asset('frontend/css/style-sign-up.css')}}">
+    {{-- <link rel="stylesheet" type="text/css" href="{{URL::asset('frontend/css/style-sign-in.css')}}"> --}}
+@endsection
 @section('pagecontent')
 <!-- sign-up  -->
-
-	<div class="signup-form">
+<div class="signup-form">
 		<form action="" method="post">
 			<h2>Register</h2>
 			<div class="form-group">
 				<input type="text" class="form-control" name="name" placeholder="Name" required="required">
 			</div>
 			<div class="form-group">
-				<input type="email" class="form-control" name="email" placeholder="Email" required="required">
+				<input type="eail" class="form-control" name="email" placeholder="Email" required="required">
 			</div>
 			<div class="form-group">
 				<input type="password" class="form-control" name="password" placeholder="Password" required="required">
@@ -41,9 +44,13 @@
 			<div class="form-group">
 				<button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
 			</div>
-		</form>
-		<div class="text-center">Already have an account? <a href="#">Sign in</a></div>
-	</div>
+        </form>
+        <br>
+		<div class="text-center">Already have an account?
+            <br>
+            <button><a href="#" style="color:black"> Sign in</a></button></div>
+    </div>
+    <br>
 	<!-- /sign-up  -->
 
 @endsection

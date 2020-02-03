@@ -1,6 +1,9 @@
 @extends('frontend.layouts.layout')
+@section('styles')
+<link rel="stylesheet" type="text/css" href="{{URL::asset('frontend/css/style-sign-up.css')}}">
+    {{-- <link rel="stylesheet" type="text/css" href="{{URL::asset('frontend/css/style-sign-in.css')}}"> --}}
+@endsection
 @section('pagecontent')
-<!-- sign-up  -->
 
 	<div class="signup-form">
 		<form action="" method="post">

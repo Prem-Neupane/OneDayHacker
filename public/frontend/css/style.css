@@ -18,7 +18,7 @@ html, body{
 
 .btn-outline-light{
 	background-color: rgba(242,27,34,0.7);
-} 
+}
 
 .btn-outline-light:hover{
 	background-color: rgba(242,27,34,0.5);
@@ -26,7 +26,8 @@ html, body{
 }
 
 .navbar {
-	opacity: 0.85;
+    opacity: 0.85;
+    z-index: 999;
 }
 
 .navbar-nav li {
@@ -46,7 +47,7 @@ html, body{
 }
 
 .ltitle{
-	color:#f21b22;	
+	color:#f21b22;
 }
 
 .ftitle, .ltitle{
@@ -55,7 +56,7 @@ html, body{
 }
 
 .brand-title{
-	padding-top: 0.5rem;	
+	padding-top: 0.5rem;
 }
 
 .carousel-inner img {
@@ -77,12 +78,12 @@ html, body{
 	margin-bottom: 0;
 	margin: 0 10px;
 	height: 45px;
-	border-radius: 8px; 
+	border-radius: 8px;
 }
 .search-content .search-form {
     background-color: rgba(242,27,34,0.75);
     border-radius: 5px;
-    padding: 20px; 
+    padding: 20px;
 }
 .search-content .search-form .form-inline input[type=submit] {
 	background: #044da2;
@@ -94,11 +95,11 @@ html, body{
 	vertical-align: top;
 	font-size: 16px;
 	font-weight: 400;
-	padding: 9px 12px; 
+	padding: 9px 12px;
 	border-radius: 15px;
 }
 .search-content .search-form .form-inline input[type=submit]:hover {
-    background-color: #f21b22; 
+    background-color: #f21b22;
 }
 
 .form-inline {
@@ -139,7 +140,7 @@ hr.horizon{
 }
 
 .navbar-light .navbar-nav .nav-link:hover{
-	 color: rgba(0,0,0,1);	
+	 color: rgba(0,0,0,1);
 }
 
 
@@ -187,15 +188,31 @@ footer{
 	margin-left: 0.5rem;
 }
 
+.jumbotron{
+	background-color: rgba(0,0,0,.25);
+	margin-bottom: -1rem;
+}
+
+.hire-form{
+	margin-left:10rem;
+	margin-right:10rem;
+	background: url('../img/bg.png') no-repeat;
+	background-position: center;
+}
+
+input{
+	opacity: 0.75;
+}
+
 /*---Media Queries --*/
 @media (max-width: 992px) {
 
   }
 @media (max-width: 768px) {
-  
+
 }
 @media (max-width: 576px) {
-  
+
 }
 
 

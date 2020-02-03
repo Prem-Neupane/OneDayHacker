@@ -10,52 +10,23 @@
 		<div class="carousel-inner">
 			<div class="carousel-item active">
 				<img src="{{URL::asset('frontend/img/banner1.jpg')}}">
-				<div class="carousel-caption">
-					<button class="btn btn-outline-light btn-lg" href="#searchbar" onclick="focusMethod()"> EXPLORE </button>
-				</div>
+
 			</div>
 			<div class="carousel-item">
 				<img src="{{URL::asset('frontend/img/banner2.jpg')}}">
-				<div class="carousel-caption">
-					<button class="btn btn-outline-light btn-lg" href="#searchbar" onclick="focusMethod()"> EXPLORE </button>
-				</div>
+
 			</div>
 			<div class="carousel-item">
 				<img src="{{URL::asset('frontend/img/banner3.jpg')}}">
-				<div class="carousel-caption">
-					<button class="btn btn-outline-light btn-lg" href="#searchbar" onclick="focusMethod()"> EXPLORE </button>
-				</div>
+
 			</div>
 		</div>
 
 	</div>
 	<!-- /Slider -->
-	<hr class="light">
+	<hr class="light" id="topP">
 
 	<!-- Searchbar -->
-
-	<div id="searchbar">
-		<div class="col-md-12">
-            <!-- search-content -->
-            <div class="container search-content">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-
-                        <div class="search-form">
-                            <form action="#" class="form-inline">
-                                <div class="form-group">
-                                    <input type="text" id="searchb" class="form-control" placeholder="Search your destination">
-                                </div>
-                                <input type="submit" class="btn search-btn" value="Search">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-	</div>
-
 	<!-- /Searchbar -->
 	<!-- Top places -->
 	<div class="container-fluid padding">
@@ -153,7 +124,7 @@
 	<!-- Top guides -->
 
 	<!-- Top places -->
-	<hr class="light">
+	<hr class="light" id="topG">
 	<div class="container-fluid padding">
 		<div class="row welcome text-center">
 			<div class="col-12">
@@ -234,5 +205,17 @@
 				</div>
 			</div> --}}
 		</div>
+    </div>
+    <!-- helpline -->
+	<div class="jumbotron">
+		<h1 class="display-4 text-center">Top Guides</h1>
+		<hr class="horizon">
+		<div class="row text-center">
+			<div class="col-md-4"> Helpline Number : 123-456-789</div>
+			<div class="col-md-4"> Transportation Helpline : 123-456-789</div>
+			<div class="col-md-4"> Embassy Number : 123-456-789</div>
+		</div>
+
 	</div>
+
 	@endsection

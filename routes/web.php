@@ -33,3 +33,4 @@ Route::group(['middleware' => ['auth'] ], function () {
 //for frontend
 route::get('/guide/{id}','FrontendController@get_guide');
 route::get('/place/{id}','FrontendController@get_place');
+route::get('/hire/{id}','FrontendController@get_hire_page')->name('hire');
