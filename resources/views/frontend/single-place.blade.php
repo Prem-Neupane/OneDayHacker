@@ -50,7 +50,7 @@
 							<img src="{{URL::asset('frontend/img/full.png')}}">
 							<img src="{{URL::asset('frontend/img/full.png')}}">
 							<img src="{{URL::asset('frontend/img/full.png')}}">
-							<img src="{{URL::asset('frontend/img/full.png')}}">
+							<img src="{{URL::asset('frontend/img/half.png')}}">
 							</div>
 							<a href="{{URL::asset('/guide/'.$guide->id)}}" class="btn btn-outline-secondary">View Profile</a><a href="#" class="btn-hire btn btn-outline-primary">Hire guide</a>
 						</div>

@@ -148,7 +148,7 @@
 							<img src="{{URL::asset('frontend/img/full.png')}}">
 							<img src="{{URL::asset('frontend/img/full.png')}}">
 							<img src="{{URL::asset('frontend/img/full.png')}}">
-							<img src="{{URL::asset('frontend/img/full.png')}}">
+							<img src="{{URL::asset('frontend/img/half.png')}}">
 						</div>
 						<a href="{{URL::asset('/guide/'.$guide->id)}}" class="btn btn-outline-secondary">View Profile</a>
 					</div>
@@ -208,7 +208,7 @@
     </div>
     <!-- helpline -->
 	<div class="jumbotron">
-		<h1 class="display-4 text-center">Top Guides</h1>
+		<h1 class="display-4 text-center">For Tourist</h1>
 		<hr class="horizon">
 		<div class="row text-center">
 			<div class="col-md-4"> Helpline Number : 123-456-789</div>
