@@ -23,12 +23,24 @@
     <!-- Footer -->
 	@include('frontend.layouts.footer')
 	<!-- /Footer -->
+    <script>
+    function search_place(){
+        var data = document.getElementById('search_data').value;
+        if((data.toLowerCase()) == "pokhara"){
+            window.location = 'http://127.0.0.1:8000/place/7';
+        }
+        else if((data.toLowerCase()) == "chitwan"){
+            window.location = 'http://127.0.0.1:8000/place/8';
+        }
+        else if((data.toLowerCase()) == "manang"){
+            window.location = 'http://127.0.0.1:8000/place/9';
+        } else {
+            alert("No result found!!");
+        }
+
+    }
+    </script>
     @yield('scripts')
 
-	<script type="text/javascript">
-		focusMethod = function getFocus(){
-			document.getElementById("searchb").focus();
-		}
-	</script>
 </body>
 </html>

@@ -15,10 +15,10 @@
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item"><a class="nav-link" href="#topP">Top Places</a></li>
 					<li class="nav-item"><a class="nav-link" href="#topG">Top Guides</a></li>
-					<form class="form-inline my-2 my-lg-0">
-				      <input class="form-control mr-sm-2" type="search" placeholder="Search . . ." aria-label="Search">
-				      <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
-				    </form>
+					<div class="form-inline my-2 my-lg-0" >
+				      <input class="form-control mr-sm-2" type="search" id="search_data" placeholder="Search . . ." aria-label="Search">
+				      <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" onclick="search_place()" ><i class="fa fa-search"></i></button>
+                    </div>
 					<li class="nav-item log"><a class="nav-link" href="{{route('signin')}}">Login</a></li>
 					<li class="nav-item"><a class="nav-link" href="{{route('signup')}}">Sign Up</a></li>
 				</ul>
