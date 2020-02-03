@@ -27,9 +27,15 @@ class HomeComposer
                     ->with('places_count', $places_count)
                     ->with('guides_count', $guides_count);
     }
-    public function user_data(View $view)
+    public function topGuides(View $view)
     {
-
+        $guides = User::where('role', 'guide')->take(4)->get();
+        $view->with('topGuides', $guides);
     }
+    public function topPlaces(View $view)
+    {
+        $places = Place::take(3)->get();
+        $view->with('topPlaces', $places);
+    }
+
 }
-//

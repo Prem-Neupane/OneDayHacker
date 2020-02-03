@@ -22,3 +22,7 @@ Route::group(['middleware' => ['auth'] ], function () {
     Route::resource('dashboard/place','PlaceController');
     Route::get('logout', 'UserController@logout')->name('logout');
 });
+
+//for frontend
+route::get('/guide/{id}','FrontendController@get_guide');
+route::get('/place/{id}','FrontendController@get_place');

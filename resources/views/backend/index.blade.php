@@ -184,7 +184,7 @@
                 <div class="col-md-4">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Top Profiles <small>Sessions</small></h2>
+                            <h2> Reviews<small>Recent Reviews<  /small></h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                 </li>

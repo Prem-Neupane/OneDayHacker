@@ -69,7 +69,29 @@
 
 	<div class="container-fluid padding">
 		<div class="row padding">
+            @isset($topPlaces)
+            @foreach ($topPlaces as $place)
 			<div class="col-md-4 col-sm-4">
+				<div class="card">
+					<img class="card-img-top" src="{{$place->feature_image}}">
+					<div class="card-body">
+						<div class="row">
+							<h4 class="card-title">{{$place->title}}</h4>
+							<div class="rating">
+								<img src="{{URL::asset('frontend/img/full.png')}}">
+								<img src="{{URL::asset('frontend/img/full.png')}}">
+								<img src="{{URL::asset('frontend/img/full.png')}}">
+								<img src="{{URL::asset('frontend/img/full.png')}}">
+								<img src="{{URL::asset('frontend/img/half.png')}}">
+							</div>
+						</div>
+						<a href="{{URL::asset('/place/'.$place->id)}}" class="btn btn-outline-secondary">Explore</a>
+					</div>
+				</div>
+            </div>
+             @endforeach
+            @endisset
+            {{-- <div class="col-md-4 col-sm-4">
 				<div class="card">
 					<img class="card-img-top" src="{{URL::asset('frontend/img/top1.jpg')}}">
 					<div class="card-body">
@@ -86,8 +108,8 @@
 						<a href="#" class="btn btn-outline-secondary">Explore</a>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-4 col-sm-4">
+            </div>
+                <div class="col-md-4 col-sm-4">
 				<div class="card">
 					<img class="card-img-top" src="{{URL::asset('frontend/img/top2.jpg')}}">
 					<div class="card-body">
@@ -98,7 +120,7 @@
 								<img src="{{URL::asset('frontend/img/full.png')}}">
 								<img src="{{URL::asset('frontend/img/full.png')}}">
 								<img src="{{URL::asset('frontend/img/full.png')}}">
-								<img src="{{URL::asset('frontend/img/empty.pnsg')}}">
+								<img src="{{URL::asset('frontend/img/empty.png')}}">
 							</div>
 						</div>
 						<a href="#" class="btn btn-outline-secondary">Explore</a>
@@ -116,13 +138,13 @@
 								<img src="{{URL::asset('frontend/img/full.png')}}">
 								<img src="{{URL::asset('frontend/img/full.png')}}">
 								<img src="{{URL::asset('frontend/img/full.png')}}">
-								<img src="{{URL::asset('frontend/fimg/empty.pnsg')}}">
+								<img src="{{URL::asset('frontend/img/empty.png')}}">
 							</div>
 						</div>
 						<a href="#" class="btn btn-outline-secondary">Explore</a>
 					</div>
 				</div>
-			</div>
+			</div> --}}
 		</div>
 	</div>
 
@@ -143,11 +165,13 @@
 
 	<div class="container-fluid padding">
 		<div class="row padding">
+            @isset($topGuides)
+            @foreach ($topGuides as $guide)
 			<div class="col-md-3 col-sm-6">
 				<div class="card">
-					<img class="rounded-circle card-img-top" src="{{URL::asset('frontend/img/guide1.png')}}">
+					<img class="rounded-circle card-img-top" src="{{$guide->image}}">
 					<div class="card-body">
-						<h4 class="card-title"> Santosh Neupane </h4>
+						<h4 class="card-title"> {{$guide->name }}</h4>
 						<div class="rating">
 							<img src="{{URL::asset('frontend/img/full.png')}}">
 							<img src="{{URL::asset('frontend/img/full.png')}}">
@@ -155,11 +179,13 @@
 							<img src="{{URL::asset('frontend/img/full.png')}}">
 							<img src="{{URL::asset('frontend/img/full.png')}}">
 						</div>
-						<a href="#" class="btn btn-outline-secondary">View Profile</a>
+						<a href="{{URL::asset('/guide/'.$guide->id)}}" class="btn btn-outline-secondary">View Profile</a>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-3 col-sm-6">
+            </div>
+            @endforeach
+            @endisset
+			{{-- <div class="col-md-3 col-sm-6">
 				<div class="card">
 					<img class="rounded-circle  card-img-top" src="{{URL::asset('frontend/img/guide2.png')}}">
 					<div class="card-body">
@@ -206,7 +232,7 @@
 						<a href="#" class="btn btn-outline-secondary">View Profile</a>
 					</div>
 				</div>
-			</div>
+			</div> --}}
 		</div>
 	</div>
 	@endsection

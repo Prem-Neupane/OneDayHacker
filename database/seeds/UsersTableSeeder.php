@@ -12,15 +12,15 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'name' => 'admin',
-            'email' => 'admin@admin.com',
+            'name' => 'Prem Neupane',
+            'email' => 'premneupane@admin.com',
             'password' => bcrypt('12345678'),
 
             'role' => 'guide',
-            'language' =>'nepali,english ',
+            'language' =>'nepali,english,spanish ',
             'location' => 'butwal',
             'dob' => '1996-05-12',
-            'image'=> 'https://i.ytimg.com/vi/7Xu_s1YJhyg/maxresdefault.jpg'
+            'image'=> 'http://127.0.0.1:8000/frontend/img/guide2.png'
 
         ]);
     }
